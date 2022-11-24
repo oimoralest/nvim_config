@@ -1,0 +1,5 @@
+{
+    // Python
+    "pyright.enable": true,
+    "python.analysis.extraPaths": [".", "../layers"]
+}
