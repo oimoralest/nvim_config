@@ -1,7 +1,18 @@
-local lightline = vim.g.lightline
+local g = vim.g
+local set = vim.opt
 
-local theme = require("plugins.configs.theme")
+set.showmode = false
 
-lightline = {
-    colorscheme = theme,
+g.lightline = {
+    colorscheme = "one",
+    component = {
+        branchIcon = "",
+    },
+    active = {
+        left = {{"mode", "paste"}, {"branchIcon", "gitbranch"}, {"readonly", "filename", "modified"}}
+    },
+    component_function = {
+        gitbranch = "FugitiveHead",
+    }
 }
+
