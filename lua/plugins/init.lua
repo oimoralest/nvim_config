@@ -95,5 +95,23 @@ return packer.startup(function(use)
         "Pocco81/auto-save.nvim",
         config = require("plugins.configs.auto_save")
     }
+
+    -- Float terminal
+    use {
+        "voldikss/vim-floaterm",
+        config = require("plugins.configs.floaterm")
+    }
+
+    -- Git
+    use {
+        "tpope/vim-fugitive",
+        requires = {
+            {
+                "airblade/vim-gitgutter",
+                config = require("plugins.configs.gitgutter")
+            }
+        },
+        config = require("plugins.configs.fugitive")
+    }
 end)
 

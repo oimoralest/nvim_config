@@ -50,3 +50,5 @@ vim.api.nvim_create_user_command("RunPythonCoverage", RunPythonCoverage, {})
 
 key_mapper("n", leader.."rt", cmd.."RunPythonUnitTests"..cr)
 key_mapper("n", leader.."rpc", cmd.."RunPythonCoverage"..cr)
+key_mapper("n", leader.."fpd", cmd..":!python3 -m darker ."..cr)
+
