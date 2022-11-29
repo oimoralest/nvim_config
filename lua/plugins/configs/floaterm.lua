@@ -7,6 +7,9 @@ local mapCommand = function(map, command)
     M.key_mapper("n", string.format("%s%s", M.leader, map), string.format("%s FloatermNew %s %s %s %s", M.cmd, height, width, command, M.cr))
 end
 
+-- Open Floaterm
+mapCommand("ct", "")
+
 -- Markdown preview
 -- requires glow
 mapCommand("md", "glow")
@@ -17,3 +20,7 @@ mapCommand("gitui", "lazygit")
 
 -- Python interpreter
 mapCommand("py", "python")
+
+-- Nodejs interpreter
+mapCommand("njs", "node")
+
