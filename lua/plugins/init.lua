@@ -87,7 +87,7 @@ return packer.startup(function(use)
     use {
         "akinsho/toggleterm.nvim",
         tag = "*",
-        config = require("plugins.configs.toggleterm") -- TODO
+        config = require("plugins.configs.toggleterm")
     }
 
     -- Auto save
@@ -113,5 +113,15 @@ return packer.startup(function(use)
         },
         config = require("plugins.configs.fugitive")
     }
-end)
 
+    -- Github Copilot
+    use {
+        "github/copilot.vim",
+        config = require("plugins.configs.copilot")
+    }
+
+    -- D2 highlighter
+    use {
+        "terrastruct/d2-vim"
+    }
+end)

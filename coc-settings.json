@@ -1,5 +1,10 @@
 {
     // Python
     "pyright.enable": true,
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--max-line-length=80"
+    ],
     "python.analysis.extraPaths": [".", "../layers"]
 }

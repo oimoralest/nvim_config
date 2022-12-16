@@ -1,10 +1,8 @@
-local theme = "onedarkpro"
+local theme = "onedark"
 
 vim.api.nvim_command("colorscheme "..theme)
 
 require("onedarkpro").setup({
-  dark_theme = "onedark", -- The default dark theme
-  light_theme = "onelight", -- The default light theme
   caching = false, -- Use caching for the theme?
   cache_path = vim.fn.expand(vim.fn.stdpath("cache") .. "/onedarkpro/"), -- The path to the cache directory
   colors = {}, -- Override default colors by specifying colors for 'onelight' or 'onedark' themes
