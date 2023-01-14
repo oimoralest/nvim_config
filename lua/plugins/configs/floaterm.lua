@@ -10,10 +10,6 @@ end
 -- Open Floaterm
 mapCommand("ct", "")
 
--- Markdown preview
--- requires glow
-mapCommand("md", "glow")
-
 -- Git UI
 -- requires lazygit
 mapCommand("gitui", "lazygit")

@@ -117,11 +117,25 @@ return packer.startup(function(use)
     -- Github Copilot
     use {
         "github/copilot.vim",
-        config = require("plugins.configs.copilot")
+        run = "git clone https://github.com/github/copilot.vim.git ~/.config/nvim/pack/github/start/copilot.vim",
+        config = require("plugins.configs.copilot"),
+        ["do"] = ":Copilot setup"
     }
 
     -- D2 highlighter
     use {
         "terrastruct/d2-vim"
     }
-end)
+
+    -- Markdown Preview
+    use {
+        "iamcco/markdown-preview.nvim",
+        run = [[cd ~/.local/share/nvim/site/pack/packer/start/
+        git clone https://github.com/iamcco/markdown-preview.nvim.git
+        cd markdown-preview.nvim
+        yarn install
+        yarn build]],
+        setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" },
+        config = require("plugins.configs.markdown_preview")
+    }
+    end)
