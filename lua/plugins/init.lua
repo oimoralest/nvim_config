@@ -63,6 +63,12 @@ return packer.startup(function(use)
         config = require("plugins.configs.theme")
     }
 
+    use { 
+        "catppuccin/nvim",
+        as = "catppuccin",
+        config = require("plugins.configs.theme")
+    }
+
     -- Tagbar
     use {
         "preservim/tagbar",
@@ -138,4 +144,4 @@ return packer.startup(function(use)
         setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" },
         config = require("plugins.configs.markdown_preview")
     }
-    end)
+end)
