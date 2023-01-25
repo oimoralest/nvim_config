@@ -31,6 +31,11 @@ key_mapper("n", leader.."ft", cmd.." NvimTreeFocus"..cr)
 key_mapper("n", leader.."sf", cmd.." w "..cr) -- Save file
 key_mapper("n", leader.."cf", cmd.." q "..cr) -- Close buffer
 
+-- Tabs
+key_mapper("n", leader.."nt", cmd.." tabnew "..cr) -- New tab
+key_mapper("n", leader.."ct", cmd.." tabclose "..cr) -- Close tab
+key_mapper("n", leader.."gt", cmd.." tabnext "..cr) -- Next tab
+
 -- Tagbar
 key_mapper("n", "<F8>", cmd.." TagbarToggle "..cr) -- Toogle Tagbar
 
