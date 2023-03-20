@@ -144,4 +144,14 @@ return packer.startup(function(use)
         setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" },
         config = require("plugins.configs.markdown_preview")
     }
+
+    -- Noice
+    use {
+        "folke/noice.nvim",
+        config = require("plugins.configs.noice"),
+        requires = {
+            "MunifTanjim/nui.nvim",
+            "rcarriga/nvim-notify"
+        }
+    }
 end)
