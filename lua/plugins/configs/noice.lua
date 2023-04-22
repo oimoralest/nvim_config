@@ -23,3 +23,27 @@ noice.setup({
         lsp_doc_border = false, -- add a border to hover docs and signature help
     },
 })
+
+-- Dependencies
+-- 1. nui.nvim
+
+-- 2. nvim-notify
+local present, notify = pcall(require, "notify")
+
+if not present then
+    return
+end
+
+notify.setup({
+    stages = "fade",
+    timeout = 2000,
+    background_colour = "#000000",
+    icons = {
+        ERROR = " ",
+        WARN = " ",
+        INFO = " ",
+        DEBUG = " ",
+        TRACE = " ",
+    },
+    top_down = false
+})
