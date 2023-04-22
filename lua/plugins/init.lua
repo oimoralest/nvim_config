@@ -153,5 +153,11 @@ return packer.startup(function(use)
             "MunifTanjim/nui.nvim",
             "rcarriga/nvim-notify"
         }
-    }
+   }
+
+   -- Multiple cursors
+   use {
+       "mg979/vim-visual-multi",
+       config = require("plugins.configs.visual_multi")
+   }
 end)
