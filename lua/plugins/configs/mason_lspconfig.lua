@@ -5,6 +5,6 @@ if not present then
 end
 
 mason_lspconfig.setup({
-    ensure_installed = { "sumneko_lua", "jsonls", "tsserver", "pyright" }
+    ensure_installed = { "pyright" }
 })
 
