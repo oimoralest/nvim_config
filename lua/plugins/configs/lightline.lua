@@ -4,7 +4,7 @@ local set = vim.opt
 set.showmode = false
 
 g.lightline = {
-    colorscheme = "one",
+    colorscheme = "gruvbox_material",
     component = {
         branchIcon = "",
     },

@@ -106,7 +106,10 @@ catppuccin.setup({
 })
 
 -- setup must be called before loading
-local theme = "catppuccin"
+local theme = "gruvbox-material"
+vim.g.gruvbox_material_background = "soft"
+
+
 vim.api.nvim_command("colorscheme "..theme)
 
 return theme

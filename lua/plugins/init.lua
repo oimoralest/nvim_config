@@ -69,6 +69,11 @@ return packer.startup(function(use)
         config = require("plugins.configs.theme")
     }
 
+    use {
+        "sainnhe/gruvbox-material",
+        config = require("plugins.configs.theme")
+    }
+
     -- Tagbar
     use {
         "preservim/tagbar",

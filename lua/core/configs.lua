@@ -15,3 +15,4 @@ set.listchars:append({
     tab = "->",
 })
 set.termguicolors = true
+set.background = "dark"
