@@ -11,7 +11,6 @@ if not present then
     packer = require("packer")
 end
 
-
 return packer.startup(function(use)
     -- NvimTree
     use {
@@ -155,14 +154,24 @@ return packer.startup(function(use)
         "folke/noice.nvim",
         config = require("plugins.configs.noice"),
         requires = {
-            "MunifTanjim/nui.nvim",
-            "rcarriga/nvim-notify"
+              "MunifTanjim/nui.nvim",
+              "rcarriga/nvim-notify"
         }
-   }
+    }
 
    -- Multiple cursors
    use {
        "mg979/vim-visual-multi",
        config = require("plugins.configs.visual_multi")
+   }
+
+   -- Database UI
+   use {
+       "kristijanhusak/vim-dadbod-ui",
+       requires = {
+           "tpope/vim-dadbod",
+           "kristijanhusak/vim-dadbod-completion"
+       },
+       config = require("plugins.configs.db_ui")
    }
 end)

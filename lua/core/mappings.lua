@@ -1,4 +1,4 @@
-local leader = "<space>"
+local leader = ","
 local cmd = "<cmd>"
 local cr = "<CR>"
 local esc = "<ESC>"
@@ -38,6 +38,9 @@ key_mapper("n", leader.."gt", cmd.." tabnext "..cr) -- Next tab
 
 -- Tagbar
 key_mapper("n", "<F8>", cmd.." TagbarToggle "..cr) -- Toogle Tagbar
+
+-- Database UI
+key_mapper("n", leader.."db", cmd.." DBUIToggle "..cr) -- Toogle DBUI
 
 return M
 
